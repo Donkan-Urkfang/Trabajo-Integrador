@@ -1,0 +1,88 @@
+.contact {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(255,255,255,1) 100%);
+    &__index {
+        color: white;
+        display: flex;
+        margin-top: 10%;
+        @media (max-width: 768px) {
+            font-size: 8px;
+        }
+    }
+}
+
+.contact-main {
+    
+    &__title {
+        color: whitesmoke;
+        font-size: 45px;
+        font-style: italic;
+        margin-bottom: 15%;
+        text-align: center;
+    }
+
+    &__address, &__tel, &__message {
+        color: beige;
+        font-size: 25px;
+    }
+    &__address, &__tel {
+        margin-bottom: 3%;
+    }
+
+
+    &__user-contact {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        &>input {
+            width: 170px;
+            border: none;
+        }
+    }
+
+    &__form-container {
+        display: flex;
+        flex-direction: column;
+        &__form-message {
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            height: 250px;
+            padding: 0.3%;
+            width: 45%;
+        }
+        &__form-submit {
+            position: relative;
+            left: 30%;
+            background-color: olivedrab;
+            border-radius: 10px;
+            color: white;
+            margin: 0.1%;
+            font-size: 24px;
+            width: 15%;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__title {
+            text-align: left;
+            font-size: 36px;
+        }
+
+        &__address,&__tel,&__user-contact,&__message {
+            font-size: 12px;
+        }
+
+        &__form-container__form-submit {
+            font-size: 12px;
+            height: 25px;
+        }
+
+        &__form-container__form-message {
+            height: 100px;
+            font-size: 12px;
+        }
+    }
+}

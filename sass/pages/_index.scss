@@ -1,0 +1,24 @@
+.main {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(13,0,255,1) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 29%, rgba(255,193,0,1) 51%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 87%, rgba(23,0,255,1) 100%);
+    clip-path: ellipse()(0.01% round 5px);
+}
+
+.section-cards {
+    /* background-color: #f1f2f3; */
+    
+    padding: 1em;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+
+    @media (min-width: 1200px) {
+        & {
+            gap: 2em
+        }
+    }
+}

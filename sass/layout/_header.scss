@@ -1,0 +1,212 @@
+/***********************************
+             HEADER
+***********************************/
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+
+
+    @media (max-width: 768px) {
+        & {
+          flex-direction: column-reverse;  
+        }
+    }
+
+}
+
+#menu {
+    display: none;
+
+    &:checked + .nav-bar {
+        display: block;
+    }
+
+    &:checked ~ .search-bar .menu-toggle__label {
+        background-color: yellow;
+    }
+}
+
+/***********************************
+             NAV BAR
+***********************************/
+
+.nav-bar {
+
+
+    &__nav-list {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        position: relative;
+        left: 25%;
+        width: 60%;
+        border-top: 8px solid #ac0023;
+        border-top-left-radius: 50em;
+        border-top-right-radius: 50em;
+
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__nav-item {
+        text-align: center;
+        /* background-color: pink; */
+    }
+
+    &__nav-link {
+        display: block;
+        /* background-color: purple; */
+        color: black;
+        padding: 1em 2em;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: none;
+        }
+    }
+
+}
+
+/***********************************
+             SEARCH BAR
+***********************************/
+
+.search-bar {
+    /* background-color: olivedrab; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &__form-container {
+        padding: 1em;
+    }
+
+    &__logo-container {
+        display: flex;
+        order: -1;
+        /* width: 60%; */
+        /* clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); */
+        img {
+            /* display: block; */
+            width: 25%;
+            position: absolute;
+            top: 3%;
+            left: -12%;
+            object-fit: cover;
+            transition: .2s;
+            &:hover,
+            &:focus  {
+                width: 35%;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+            }
+        }
+    }
+
+    &__form-container {
+        /* background-color: gold; */
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+        padding-top: 10%;
+    }
+
+    &__form-label {
+        display: none;
+    }
+
+    &__form-search {
+        display: flex;
+        background-color: rgb(203, 203, 203);
+        width: 70%;
+        height: 25%;
+        padding: 0.1%;
+        border-radius: 30px;
+        border-bottom: none;
+        border-right: none;
+    }
+
+    &__form-submit {
+        /* text-align: left; */
+        height: 25%;
+        background-color: darkslategray;
+        color: white;
+        padding: 0.1%;
+    }
+
+    &__carrito-container {
+        display: flex;
+        order: -1;
+        /* background-color: goldenrod; */
+        img {
+            /* display: block; */
+            width: 10%;
+            position: absolute;
+            top: 3%;
+            right: -3%;
+            object-fit: cover;
+            transition: .2s;
+            &:hover, 
+            &:focus {
+                width: 20%;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+                
+            }
+        }
+    }
+
+}
+
+/***********************************
+             MENU TOGGLE
+***********************************/
+.menu-toggle {
+    display: none;
+    background-color: red;
+    flex: 0 0 3em;
+    position: relative;
+    cursor: pointer;
+
+    &__label {
+        display: block;
+        background-color: black;
+        height: 100%;
+    }
+
+    &__top-bread,
+    &__meat,
+    &__bottom-bread {
+        display: block;
+        background-color: #333;
+        height: .2em;
+        position: absolute;
+        left: .5em;
+        right: .5em;
+    }
+
+    &__top-bread {
+        top: .8em;
+    }
+
+    &__meat {
+        top: 50%;
+        margin-top: -.1em;
+    }
+
+    &__bottom-bread {
+        bottom: .8em;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: block
+        }
+    }
+
+}
