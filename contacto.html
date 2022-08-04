@@ -5,9 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Inicio</title>
+    <title>Contacto</title>
 </head>
-<body>
+<body class="contact">
     
+    <div class="contact">
+        <div class="contact-main">
+
+            <h1 class="contact-main__title">Contacto:</h1>
+
+            <div class="contact-main__address">Contacto@Gmail.com</div>
+            <div class="contact-main__tel">Telefono: +54-1551774-144</div>
+
+            <div class="contact-main__user-contact">
+                <label class="contact-main__user-contact__user-name" for="nombre">Nombre:</label>
+                <input class="contact-main__user-contact__user-name" type="text" name="nombre">
+                <label class="contact-main__user-contact__user-mail" for="mail">Correo Electronico:</label>
+                <input class="contact-main__user-contact__user-mail" type="text" name="mail">
+                <label class="contact-main__user-contact__user-tel" for="tel">Telefono:</label>
+                <input class="contact-main__user-contact__user-tel" type="text" name="tel">
+            </div>
+            
+            
+            
+            <div class="contact-main__message">Dejenos su mensaje!</div>
+
+            <form action="" class="contact-main__form-container">
+
+                <textarea class="contact-main__form-container__form-message" name="mensaje" id="mensaje" placeholder="Por favor sea breve con su consulta."></textarea>                
+                <input type="submit" class="contact-main__form-container__form-submit" value="Enviar" />
+            </form>
+        </div>
+
+        <a class="contact__index" href="index.html">Regrese a la pagina principal. Haciendo click aqui!</a>
+    </div>
+
 </body>
 </html>
